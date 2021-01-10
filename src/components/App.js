@@ -17,7 +17,6 @@ export default function App() {
     return <React.Fragment>
       <Header/>
       <LoadNetwork onLoad={setState}/>
-      <Documentation/>
     </React.Fragment>;
   }
 

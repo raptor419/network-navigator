@@ -122,6 +122,45 @@ export default class LoadNetwork extends React.Component {
       });
   };
 
+  loadMarch = () => {
+    const filename = "march.ftree";
+
+    this.setState({
+      progressVisible: true,
+      progressValue: 1,
+      progressLabel: "Reading file",
+      progressError: false
+    });
+
+    fetch(`/navigator/${filename}`)
+      .then(res => res.text())
+      .then(file => this.loadNetwork(file, filename))
+      .catch((err) => {
+        this.setState(errorState(err));
+        console.log(err);
+      });
+  };
+
+  loadAugust = () => {
+    const filename = "august.ftree";
+
+    this.setState({
+      progressVisible: true,
+      progressValue: 1,
+      progressLabel: "Reading file",
+      progressError: false
+    });
+
+    fetch(`/navigator/${filename}`)
+      .then(res => res.text())
+      .then(file => this.loadNetwork(file, filename))
+      .catch((err) => {
+        this.setState(errorState(err));
+        console.log(err);
+      });
+  };
+
+
   render() {
     const { progressError, progressLabel, progressValue, progressVisible, ftree } = this.state;
 
@@ -143,82 +182,30 @@ export default class LoadNetwork extends React.Component {
           style={{ padding: "50px 0px" }}
           padded='very'
         >
-          <Label attached="top right">v {process.env.REACT_APP_VERSION}</Label>
+          
+          <Step.Group>
+            <Step
+              disabled={disabled}
+              icon="book"
+              title="Load Map Equation Network"
+              description="March"
+              link
+              onClick={this.loadAugust}
+            />
+          </Step.Group>
+
+          <Divider horizontal style={{ margin: "20px 0px 30px 0px" }} content=""/>
 
           <Step.Group>
             <Step
               disabled={disabled}
               icon="book"
-              title="Load example"
-              description="Citation network"
+              title="Load Map Equation Network"
+              description="August"
               link
-              onClick={this.loadExampleData}
+              onClick={this.loadMarch}
             />
           </Step.Group>
-
-          {!!ftree &&
-          <React.Fragment>
-            <Divider hidden/>
-
-            <Step.Group>
-              <Step
-                disabled={disabled}
-                link
-                onClick={() => this.loadNetwork(ftree, "infomap.ftree")}
-              >
-                <Image
-                  spaced="right"
-                  size="tiny"
-                  disabled={disabled}
-                  verticalAlign="middle"
-                  src="//www.mapequation.org/assets/img/twocolormapicon_whiteboarder.svg"
-                  alt="mapequation-icon"
-                />
-                <Step.Content>
-                  <Step.Title>
-                    Open from <span className="brand brand-infomap">Infomap</span> <span
-                    className="brand brand-nn">Online</span>
-                  </Step.Title>
-                </Step.Content>
-              </Step>
-            </Step.Group>
-          </React.Fragment>
-          }
-
-          <Divider horizontal style={{ margin: "20px 100px 30px 100px" }} content="Or"/>
-
-          <Step.Group ordered>
-            <Step
-              disabled={disabled}
-              link
-              as="a"
-              href="//www.mapequation.org/infomap"
-            >
-              <Step.Content>
-                <Step.Title>Cluster network with Infomap</Step.Title>
-                <Step.Description>
-                  Command line version or <span className="brand brand-infomap">Infomap</span> <span
-                  className="brand brand-nn">Online</span>
-                </Step.Description>
-              </Step.Content>
-            </Step>
-            <Step
-              disabled={disabled}
-              as="label"
-              link
-              active={!disabled}
-              title="Load ftree file"
-              htmlFor="upload"
-            />
-          </Step.Group>
-          <input
-            style={{ visibility: "hidden" }}
-            type='file'
-            id='upload'
-            onChange={() => this.loadNetwork(this.input.files[0])}
-            accept=".ftree"
-            ref={input => this.input = input}
-          />
 
           {progressVisible &&
           <div style={{ padding: "50px 100px 0" }}>

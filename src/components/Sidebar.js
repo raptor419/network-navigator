@@ -38,8 +38,8 @@ export default function Sidebar(props) {
     visible={sidebarVisible}
     vertical
   >
-    <Menu.Item header href="//www.mapequation.org/navigator">
-      <MenuHeader/>
+    <Menu.Item header href="">
+      Go Back
     </Menu.Item>
     <Menu.Item onClick={() => dispatch({ type: "sidebarVisible", value: false })} icon='close' content='Hide sidebar'/>
     <Menu.Item>
