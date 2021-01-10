@@ -190,7 +190,7 @@ export default class LoadNetwork extends React.Component {
               title="Load Map Equation Network"
               description="March"
               link
-              onClick={this.loadAugust}
+              onClick={this.loadMarch}
             />
           </Step.Group>
 
@@ -203,7 +203,7 @@ export default class LoadNetwork extends React.Component {
               title="Load Map Equation Network"
               description="August"
               link
-              onClick={this.loadMarch}
+              onClick={this.loadAugust}
             />
           </Step.Group>
 
