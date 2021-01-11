@@ -12,10 +12,10 @@ const Header = () => (
               </a>
             <div className="content">
                             <span className="brand">
-                                <span className="brand-infomap">Infomap</span> <span className="brand-nn">Network Graph</span>
+                                <span className=""></span> <span className="brand-nn">Multilevel Network Communities</span>
                             </span>
-              <div className="sub header">Interactive hierarchical network navigator</div>
-              <div className="sub header">Powered by Mapequation Infomap</div>
+              <div className="sub header">Interactive hierarchical network navigation</div>
+              <div className="sub header"></div>
             </div>
           </h1>
         </div>

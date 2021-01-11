@@ -189,7 +189,7 @@ export default class LoadNetwork extends React.Component {
             <Step
               disabled={disabled}
               icon="book"
-              title="March"
+              title="March, 2020"
               description=""
               link
               onClick={this.loadMarch}
@@ -202,7 +202,7 @@ export default class LoadNetwork extends React.Component {
             <Step
               disabled={disabled}
               icon="book"
-              title="August"
+              title="August, 2020"
               description=""
               link
               onClick={this.loadAugust}
