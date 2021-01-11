@@ -182,26 +182,28 @@ export default class LoadNetwork extends React.Component {
           style={{ padding: "50px 0px" }}
           padded='very'
         >
+
+        <h2> Choose Multilevel Network </h2>
           
           <Step.Group>
             <Step
               disabled={disabled}
               icon="book"
-              title="Load Map Equation Network"
-              description="March"
+              title="March"
+              description=""
               link
               onClick={this.loadMarch}
             />
           </Step.Group>
 
-          <Divider horizontal style={{ margin: "20px 0px 30px 0px" }} content=""/>
+          <Divider horizontal style={{ margin: "0px 0px 0px 0px" }} content=""/>
 
           <Step.Group>
             <Step
               disabled={disabled}
               icon="book"
-              title="Load Map Equation Network"
-              description="August"
+              title="August"
+              description=""
               link
               onClick={this.loadAugust}
             />

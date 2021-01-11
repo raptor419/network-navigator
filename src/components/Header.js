@@ -9,15 +9,13 @@ const Header = () => (
         <div>
           <h1 className="ui header">
             <a href="">
-              <img className="mapequation-logo"
-                   src="//www.mapequation.org/assets/img/twocolormapicon_whiteboarder.svg"
-                   alt="mapequation-icon"/>
-            </a>
+              </a>
             <div className="content">
                             <span className="brand">
                                 <span className="brand-infomap">Infomap</span> <span className="brand-nn">Network Graph</span>
                             </span>
               <div className="sub header">Interactive hierarchical network navigator</div>
+              <div className="sub header">Powered by Mapequation Infomap</div>
             </div>
           </h1>
         </div>
