@@ -4,7 +4,7 @@ import Legend from "./Legend";
 
 
 const Documentation = () =>
-  <Container style={{ padding: "40px 0 0px 0" }}>
+  <Container style={{ padding: "40px 0 40px 0" }}>
     <Grid columns={1}>
       <Grid.Column>
         <center><p>
