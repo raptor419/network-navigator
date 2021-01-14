@@ -1,7 +1,7 @@
 {
   "name": "infomap-network-navigator",
   "version": "1.1.2",
-  "homepage": "/",
+  "homepage": "https://competent-shirley-99e49e.netlify.app/",
   "private": true,
   "dependencies": {
     "@sentry/browser": "^5.15.4",
