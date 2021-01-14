@@ -1,7 +1,7 @@
 {
   "name": "infomap-network-navigator",
   "version": "1.1.2",
-  "homepage": "/",
+  "homepage": "/navigator",
   "private": true,
   "dependencies": {
     "@sentry/browser": "^5.15.4",
@@ -30,7 +30,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "react-scripts build && react-snap && scp -r build/* mapequation:/var/www/network-navigator",
-    "postbuild": "PUBLIC_URL=https://competent-shirley-99e49e.netlify.app/ react-snap",
+    "postbuild": "PUBLIC_URL=https://competent-shirley-99e49e.netlify.app/navigator/ react-snap",
     "release": "standard-version"
   },
   "browserslist": {
